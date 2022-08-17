@@ -70,19 +70,20 @@ export const serviceSlice = createSlice({
   initialState,
   reducers: {
     checker: (state, action) => {
-      const input = document.getElementById(`${action.payload}`).checked;
+      const checkedStatus = document.getElementById(
+        `${action.payload}`
+      ).checked;
 
-      if (input) {
+      if (checkedStatus) {
         state.services[action.payload].options[0].selected =
           !state.services[action.payload].options[0].selected;
-      }
-
-      if (input === false) {
+      } else {
         state.services[action.payload].options.forEach((option) => {
           option.selected = false;
         });
       }
     },
+
     changeRadio: (state, action) => {
       state.services[action.payload[0]].options.forEach((option) => {
         option.selected = false;
