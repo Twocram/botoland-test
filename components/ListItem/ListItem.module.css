@@ -1,0 +1,63 @@
+.item {
+  display: block;
+  padding: 32px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.item_name {
+  font-weight: 600;
+  color: #34414a;
+  margin-bottom: 21px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.box {
+  appearance: none;
+  position: relative;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #34414a;
+  opacity: 0.4;
+  border-radius: 2px;
+  outline: none;
+}
+
+.box:hover {
+  opacity: 1;
+  border: 1px solid #ff9619;
+  transition: 0.1s ease-in;
+}
+
+.box:checked {
+  background-color: #ff9619;
+  opacity: 1;
+  border: none;
+}
+
+.box:checked::after {
+  position: absolute;
+  content: url('../../assets/check.png');
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+
+@media screen and (max-width: 960px) {
+  .item {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .item {
+    padding: 16px 0;
+  }
+}

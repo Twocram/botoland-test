@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hideBtn {
+  margin: 32px 0 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ff9619;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .hideBtn {
+    margin: 20px 0 0;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hideBtn {
+    margin: 16px 0 0;
+  }
+}
