@@ -4,7 +4,7 @@ export default function Home() {
   const services = useSelector((state) => state.service.services);
   const dispatch = useDispatch();
   return (
-    <div style={{ padding: 50, background: '#eeeeee' }}>
+    <div>
       <AddServices services={services} dispatch={dispatch} />
     </div>
   );
